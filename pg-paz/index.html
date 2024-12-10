@@ -87,9 +87,30 @@
     </style>
   </head>
   <body>
+    <script>
+  // Função para capturar parâmetros da URL
+  function getUTMParams() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+      utm_source: params.get('utm_source'),
+      utm_medium: params.get('utm_medium'),
+      utm_campaign: params.get('utm_campaign'),
+      utm_content: params.get('utm_content'),
+      utm_term: params.get('utm_term'),
+    };
+  }
+
+  // Salva os UTMs no Local Storage ou Cookie (se necessário)
+  const utmParams = getUTMParams();
+  localStorage.setItem('utm_source', utmParams.utm_source || '');
+  localStorage.setItem('utm_medium', utmParams.utm_medium || '');
+  localStorage.setItem('utm_campaign', utmParams.utm_campaign || '');
+  localStorage.setItem('utm_content', utmParams.utm_content || '');
+  localStorage.setItem('utm_term', utmParams.utm_term || '');
+</script>
     <div class="flex">
       <!-- Botão funcional como link -->
-      <a href="https://www.euvina-web.online/pg-paz" class="button">Clique Aqui 👈👈</a>
+      <a href="https://purovitta.com/products/titanium-black-sp" class="button">Clique Aqui 👈👈</a>
     </div>
     <div class="rodape">
       <div class="disclaimer">
@@ -104,7 +125,7 @@
       <a href="pg-paz/termos.html"><strong>Termos de Uso</strong></a> —
       <a href="pg-paz/avisos.html"><strong>Aviso Legal</strong></a>
       <p>Atendimento através: contato@euvina-web.online</p>
-      <p>CNPJ: 49.577.752/0001-09 // ©️ 2024 - PAEZ DE LIMA </p>
+      <p>CNPJ: 49.577.752/0001 - 09 // ©️ 2024 - PAEZ DE LIMA </p>
       <p>Todos os direitos reservados</p>
     </div>
   </body>
