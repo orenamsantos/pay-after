@@ -23,7 +23,8 @@
         flex-direction: column;
       }
 
-      button {
+      .button {
+        display: inline-block;
         background: linear-gradient(45deg, #000000, #003366); /* Gradiente de fundo */
         color: #fff; /* Texto branco */
         padding: 20px 40px;
@@ -33,6 +34,8 @@
         font-weight: bold;
         cursor: pointer;
         text-shadow: none; /* Remover o brilho do texto */
+        text-align: center;
+        text-decoration: none; /* Remover sublinhado */
         box-shadow: none; /* Remover o brilho ao redor do botão */
         animation: pulse 1.0s infinite alternate; /* Animação de pulsar */
       }
@@ -76,7 +79,7 @@
           font-size: 14px;
         }
 
-        button {
+        .button {
           padding: 15px 30px;
           font-size: 18px;
         }
@@ -85,7 +88,8 @@
   </head>
   <body>
     <div class="flex">
-      <button onclick="window.location.href='https://www.euvina-web.online/pg-paz';">Clique Aqui 👈👈</button>
+      <!-- Botão funcional como link -->
+      <a href="https://www.euvina-web.online/pg-paz" class="button">Clique Aqui 👈👈</a>
     </div>
     <div class="rodape">
       <div class="disclaimer">
