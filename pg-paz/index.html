@@ -88,6 +88,28 @@
     </style>
   </head>
   <body>
+    <script>
+  // Função para capturar parâmetros da URL
+  function getUTMParams() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+      utm_source: params.get('utm_source'),
+      utm_medium: params.get('utm_medium'),
+      utm_campaign: params.get('utm_campaign'),
+      utm_content: params.get('utm_content'),
+      utm_term: params.get('utm_term'),
+    };
+  }
+
+  // Salva os UTMs no Local Storage ou Cookie (se necessário)
+  const utmParams = getUTMParams();
+  localStorage.setItem('utm_source', utmParams.utm_source || '');
+  localStorage.setItem('utm_medium', utmParams.utm_medium || '');
+  localStorage.setItem('utm_campaign', utmParams.utm_campaign || '');
+  localStorage.setItem('utm_content', utmParams.utm_content || '');
+  localStorage.setItem('utm_term', utmParams.utm_term || '');
+</script>
+
     <div class="flex">
       <button onclick="window.location.href = '' ">Clique Aqui 👈👈</button>
     </div>
@@ -116,4 +138,3 @@
     </div>
   </body>
 </html>
-`
